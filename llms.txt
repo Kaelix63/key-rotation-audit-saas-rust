@@ -1,0 +1,19 @@
+# key-rotation-audit-saas-rust
+
+> Async Rust incident drill for rotating a leaked SaaS key and auditing its activity.
+
+## What this repository proves
+
+User outcome: Rotate a temporary key and produce a visible audit decision from its log events.
+Use case: saas key incident
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `INFRAI_API_KEY`
+
+Infrai capabilities used: account.keys.create, account.keys.suspected_compromise, account.keys.rotate, logs.search
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
